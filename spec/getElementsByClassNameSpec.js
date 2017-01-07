@@ -17,9 +17,9 @@ describe('getElementsByClassName', function() {
       $('body').append($rootElement);
 
       var result = getElementsByClassName('targetClassName');
+      //console.log("result " + result);
       var expectedNodeList = document.getElementsByClassName('targetClassName');
       var expectedArray = Array.prototype.slice.apply(expectedNodeList);
-      console.log(expectedArray);
       var equality = _.isEqual(result, expectedArray); // why can't we use `===` here?
       expect(equality).to.equal(true);
 
